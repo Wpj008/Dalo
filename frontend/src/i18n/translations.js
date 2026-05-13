@@ -80,6 +80,8 @@ export const translations = {
       missionTitle: "Notre mission",
       missionBody:
         "Former, équiper et envoyer des disciples authentiques à travers les nations par l'enseignement, la prière et le mentorat.",
+      legacyQuote:
+        "Une génération qui comprend ses temps changera le cours d'une nation.",
     },
     ministries: {
       eyebrow: "Nos ministères",
@@ -233,6 +235,8 @@ export const translations = {
       missionTitle: "Our mission",
       missionBody:
         "To train, equip, and send authentic disciples across nations through teaching, prayer, and mentorship.",
+      legacyQuote:
+        "A generation that understands its times will change the course of a nation.",
     },
     ministries: {
       eyebrow: "Our ministries",

@@ -71,7 +71,7 @@ export default function BecomeMember() {
                           ? "bg-dmi-gold text-dmi-charcoal"
                           : "bg-white text-dmi-charcoal/50 border border-dmi-charcoal/10"
                       }`}
-                      data-testid={`member-step-${i}`}
+                      data-testid={`member-step-${i + 1}`}
                     >
                       {i < step ? <Check size={14} /> : i + 1}
                     </div>

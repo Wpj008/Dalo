@@ -133,7 +133,7 @@ export default function About() {
         <div className="dmi-container max-w-4xl text-center">
           <Quote className="mx-auto text-dmi-gold/40" size={48} strokeWidth={1} />
           <p className="mt-6 font-serif italic text-3xl sm:text-4xl leading-snug font-light">
-            "Une génération qui comprend ses temps changera le cours d'une nation."
+            "{t("about.legacyQuote")}"
           </p>
           <div className="mt-6 text-[10px] uppercase tracking-[0.32em] text-dmi-gold">
             — Pastor Roland Dalo
