@@ -1,53 +1,43 @@
-import { useEffect } from "react";
+import React from "react";
 import "@/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
-
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
-
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
-
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
-
-  return (
-    <div>
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
+import { LanguageProvider } from "./i18n/LanguageContext";
+import { Layout } from "./components/layout/Layout";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Ministries from "./pages/Ministries";
+import Events from "./pages/Events";
+import Media from "./pages/Media";
+import InternationalImpactPage from "./pages/InternationalImpactPage";
+import Partnership from "./pages/Partnership";
+import Contact from "./pages/Contact";
+import Churches from "./pages/Churches";
+import PrayerRequest from "./pages/PrayerRequest";
+import BecomeMember from "./pages/BecomeMember";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <div className="App">
+    <LanguageProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
+          <Route element={<Layout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/ministries" element={<Ministries />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/media" element={<Media />} />
+            <Route path="/impact" element={<InternationalImpactPage />} />
+            <Route path="/partnership" element={<Partnership />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/churches" element={<Churches />} />
+            <Route path="/prayer" element={<PrayerRequest />} />
+            <Route path="/member" element={<BecomeMember />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </BrowserRouter>
-    </div>
+    </LanguageProvider>
   );
 }
 

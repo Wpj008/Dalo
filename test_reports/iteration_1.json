@@ -1,0 +1,51 @@
+{
+  "summary": "Frontend-only smoke + functional test of Dalo Ministries International (11 pages + 404). All routes compile and render. Language switcher (FR default ↔ EN) works and persists via localStorage across navigation. All key data-testids present (hero, country dots x14, testimonial slider, events filters x4, media filters x5, donation form & presets, member stepper). Every form (contact, prayer, donation, newsletter, become-member) shows a sonner success toast on submit. Header logo→/, donate→/partnership. No dead internal links — every <a href> in header & footer maps to one of the 11 valid routes. 404 page renders with 'Back to home' link.",
+  "backend_issues": {
+    "critical": [],
+    "minor": []
+  },
+  "frontend_issues": {
+    "ui_bugs": [
+      {
+        "component": "BecomeMember.jsx",
+        "issue": "Stepper data-testids use 0-indexed naming (member-step-0/1/2) instead of the 1-indexed naming promised in the review request (member-step-1/2/3). The third step indicator therefore exposes no member-step-3 testid even though the form's third panel (commit checkbox + submit) renders correctly.",
+        "selector": "[data-testid='member-step-3']",
+        "priority": "LOW"
+      },
+      {
+        "component": "About.jsx — Quote band",
+        "issue": "Final quote 'Une génération qui comprend ses temps changera le cours d'une nation.' and its attribution remain in French even after switching to EN. i18n coverage gap on About page quote section.",
+        "selector": "About page quote band",
+        "priority": "LOW"
+      }
+    ],
+    "integration_issues": [],
+    "design_issues": [
+      {
+        "screen": "Mobile menu (390x844)",
+        "issues": ["Hamburger toggles a fullscreen overlay correctly but the first menu link can appear partially hidden behind the close (X) button at very top of screen depending on scroll. Cosmetic — navigation still works."]
+      }
+    ]
+  },
+  "test_report_links": [],
+  "action_items": [
+    "(LOW) Rename data-testid='member-step-0|1|2' to 'member-step-1|2|3' for consistency with PRD/testing contract, or document the 0-indexed scheme.",
+    "(LOW) Add EN translation for About page final quote band so language switch fully localises the page."
+  ],
+  "critical_code_review_comments": [
+    "All 11 routes load without compile errors and use lazy state correctly; no console errors observed during navigation.",
+    "Language persistence via localStorage('dmi-lang') is implemented correctly in LanguageContext.jsx with useEffect; default falls back to 'fr'.",
+    "BecomeMember.jsx onSubmit guards on `form.commit` and surfaces a toast.error if unchecked — good validation pattern.",
+    "Donation form correctly syncs preset chip → amount input value.",
+    "External social/CTA links all currently point to a single placeholder YouTube URL (rickroll). Acceptable for a mocked frontend, but should be replaced with real ministry URLs before launch.",
+    "No backend calls detected anywhere — fully frontend-mocked as required."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A (no backend)", "frontend": "≈97% (2 minor cosmetic/i18n issues)"},
+  "test_credentials": "N/A — no auth in app",
+  "seed_data_creation": "None — all data already mocked in /app/frontend/src/data/mock.js",
+  "retest_needed": false,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "App is frontend-only (no backend). Public URL: https://roland-dalo-platform.preview.emergentagent.com . LanguageProvider defaults to FR, persists in localStorage key 'dmi-lang'. Reset with localStorage.clear() before testing FR-default behaviour. Member stepper uses 0-indexed data-testids (member-step-0/1/2), commit-checkbox + submit live in panel index 2. Sonner toasts use [data-sonner-toast] selector. Country dots have selectors [data-testid^='country-'] (14 total). Donation form: donation-preset-{20|50|100|250}, donation-amount-input, donation-submit-btn. All 11 routes verified loadable: / /about /ministries /events /media /impact /partnership /contact /churches /prayer /member, plus * → 404. No dead internal links.",
+  "rca_of_the_issue": "N/A — no blocking bugs. Two minor issues: (1) testid indexing mismatch in BecomeMember stepper (cosmetic naming only — root cause: developer used `i` from `steps.map((label, i)` which is 0-indexed; fix is to use `i+1` in template literal); (2) About page final quote not wired through t() — root cause: hardcoded French string in About.jsx quote band component (fix: replace literal with t('about.legacyQuote') and add translations)."
+}
