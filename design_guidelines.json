@@ -1,0 +1,127 @@
+{
+  "theme": {
+    "archetype": "5 (Jewel & Luxury) + 1 (Organic & Earthy)",
+    "description": "Mix élégant - Cinematic dark hero sections blending seamlessly into clean, premium light content sections. Focus on modern luxury, spiritual depth, and international institutional authority.",
+    "tone": "Premium, Spiritual, International, Cinematic, Elegant",
+    "color_palette": {
+      "primary": {
+        "navy": "#0B132B",
+        "navy_light": "#1C2541",
+        "charcoal": "#0A0A0A",
+        "charcoal_light": "#121212",
+        "off_white": "#F8F9FA",
+        "pure_white": "#FFFFFF"
+      },
+      "accents": {
+        "gold": "#D4AF37",
+        "gold_light": "#E5C158",
+        "beige": "#EAE0D5",
+        "light_blue": "#5BC0BE"
+      },
+      "surfaces": {
+        "dark_bg": "#0A0A0A",
+        "dark_card": "#121212",
+        "light_bg": "#F8F9FA",
+        "light_card": "#FFFFFF",
+        "border_dark": "rgba(255,255,255,0.1)",
+        "border_light": "rgba(0,0,0,0.05)"
+      }
+    }
+  },
+  "typography": {
+    "fonts": {
+      "heading": "'Cormorant Garamond', serif",
+      "body": "'Satoshi', sans-serif"
+    },
+    "scale": {
+      "h1": "text-5xl sm:text-6xl lg:text-7xl tracking-tighter leading-none",
+      "h2": "text-4xl sm:text-5xl tracking-tight leading-tight",
+      "h3": "text-2xl sm:text-3xl tracking-tight",
+      "h4": "text-xl sm:text-2xl",
+      "body": "text-base sm:text-lg leading-relaxed",
+      "overline": "text-xs sm:text-sm uppercase tracking-[0.2em] font-semibold"
+    },
+    "rules": {
+      "headings": "Use font-light or font-medium for an editorial, cinematic look. Avoid bold unless necessary.",
+      "body": "Keep body text highly readable. Use text-white/80 on dark backgrounds, and text-black/80 on light backgrounds."
+    }
+  },
+  "layout_and_spacing": {
+    "container": "max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-12",
+    "section_spacing": "py-20 sm:py-32",
+    "grid_system": {
+      "marketing": "grid-cols-1 md:grid-cols-8 lg:grid-cols-12 gap-8 lg:gap-12",
+      "cards": "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+    },
+    "border_radius": "rounded-lg (8px) or rounded-md (6px) for subtle, premium geometry. Avoid pill shapes for cards.",
+    "shadows": {
+      "light_mode": "shadow-[0_8px_32px_rgba(0,0,0,0.04)]",
+      "dark_mode": "shadow-[0_8px_32px_rgba(255,255,255,0.02)]"
+    }
+  },
+  "components": {
+    "header": {
+      "style": "Crystal Glassmorphism on scroll: backdrop-blur-xl bg-charcoal/80 border-b border-white/10. Transparent at top.",
+      "behavior": "Sticky top, Z-50. Navigation items text-white/90 hover:text-gold transition-colors."
+    },
+    "hero": {
+      "style": "Fullscreen h-screen min-h-[600px] relative overflow-hidden",
+      "overlay": "bg-gradient-to-b from-charcoal/30 via-charcoal/50 to-charcoal",
+      "content": "Centered or Left-aligned, H1 in Cormorant Garamond, subtle staggered fade-up via Framer Motion"
+    },
+    "buttons": {
+      "primary": "bg-gold text-charcoal px-8 py-3 rounded-md font-semibold hover:bg-gold_light transition-all shadow-lg hover:shadow-gold/20 hover:-translate-y-1",
+      "secondary": "bg-transparent border border-white/30 text-white px-8 py-3 rounded-md hover:bg-white/10 transition-all hover:-translate-y-1",
+      "dark_mode_secondary": "bg-transparent border border-black/20 text-charcoal px-8 py-3 rounded-md hover:bg-black/5 transition-all hover:-translate-y-1"
+    },
+    "cards": {
+      "event_card": "bg-light_card border border-border_light p-6 rounded-lg hover:shadow-lg transition-shadow. Contains 'Upcoming' badge, date, speaker.",
+      "video_card": "YouTube-style premium thumbnail. overflow-hidden rounded-lg group. Image scales up slightly on hover. Play button overlay fades in.",
+      "testimonial_slider": "Large airy quotes in Cormorant Garamond. Minimalist navigation arrows. Photos + video pills."
+    },
+    "stats": {
+      "style": "Large typography (text-5xl+) for numbers in Cormorant Garamond, paired with small uppercase overlines for labels.",
+      "animation": "Count-up animation on scroll visibility."
+    },
+    "world_map": {
+      "style": "Dark background section (#0B132B) with abstract world map image overlaid. Glowing gold nodes for active countries."
+    },
+    "footer": {
+      "style": "bg-charcoal text-white py-24. High contrast. Large brand typography. Newsletter form with minimal inputs (bottom border only)."
+    }
+  },
+  "interactions_and_motion": {
+    "libraries": ["framer-motion", "lucide-react", "lenis"],
+    "patterns": {
+      "scroll": "Smooth scrolling momentum using Lenis.",
+      "reveal": "Sections fade in and translate Y (e.g., y: 40 -> 0) on intersection.",
+      "stagger": "List items (cards, nav links) stagger in with 0.1s delay.",
+      "hover": "Images inside cards scale to 1.05 over 0.6s ease-out. Buttons elevate slightly."
+    }
+  },
+  "media": {
+    "images": {
+      "hero_pastor": "https://static.prod-images.emergentagent.com/jobs/a2add377-a02d-450c-9340-5bdcff1b280d/images/3ad5c207f1622910c4d36e61ee4837d62ebe26801987ffb25a5d000965b609c6.png",
+      "prayer_hands": "https://static.prod-images.emergentagent.com/jobs/a2add377-a02d-450c-9340-5bdcff1b280d/images/43dd518b315dd8c0985bff00348ab981611b8c6705b6a06f8137af1eebce80ec.png",
+      "world_map_impact": "https://static.prod-images.emergentagent.com/jobs/a2add377-a02d-450c-9340-5bdcff1b280d/images/84b384f459c4cb8a8c8ea262fdfccd5e1405810d6ba8af186076e3659b340dd3.png",
+      "modern_church_interior": "https://static.prod-images.emergentagent.com/jobs/a2add377-a02d-450c-9340-5bdcff1b280d/images/17f5218d15878b4300990a72620cd34ede7e68ee4f6cff855c8291908af1b278.png",
+      "abstract_navy_gold": "https://static.prod-images.emergentagent.com/jobs/a2add377-a02d-450c-9340-5bdcff1b280d/images/062bf0788ef3ab3b5019ca4629915ddb207389b7556e794364039ddf4175a888.png",
+      "worship_crowd_1": "https://images.unsplash.com/photo-1776091164403-ea8ffb00ed0f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwxfHx3b3JzaGlwJTIwY29uZ3JlZ2F0aW9uJTIwaGFuZHMlMjBsaWZ0ZWR8ZW58MHx8fHwxNzc4Njc3NzEwfDA&ixlib=rb-4.1.0&q=85",
+      "worship_crowd_2": "https://images.unsplash.com/photo-1776091104217-02e3732a4a81?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwyfHx3b3JzaGlwJTIwY29uZ3JlZ2F0aW9uJTIwaGFuZHMlMjBsaWZ0ZWR8ZW58MHx8fHwxNzc4Njc3NzEwfDA&ixlib=rb-4.1.0&q=85",
+      "conference_crowd_1": "https://images.unsplash.com/photo-1725555946744-37906174e061?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwxfHxjaHVyY2glMjBjb25mZXJlbmNlJTIwY3Jvd2R8ZW58MHx8fHwxNzc4Njc3NzEwfDA&ixlib=rb-4.1.0&q=85",
+      "conference_crowd_2": "https://images.unsplash.com/photo-1722872112503-922d881bdddc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwyfHxjaHVyY2glMjBjb25mZXJlbmNlJTIwY3Jvd2R8ZW58MHx8fHwxNzc4Njc3NzEwfDA&ixlib=rb-4.1.0&q=85",
+      "sunset_rays": "https://images.unsplash.com/photo-1763321728101-196462859211?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODd8MHwxfHNlYXJjaHwzfHxzdW5zZXQlMjBjbG91ZHMlMjByYXlzfGVufDB8fHx8MTc3ODY3NzcxMHww&ixlib=rb-4.1.0&q=85"
+    }
+  },
+  "instructions_to_main_agent": [
+    "Install fonts: import 'Cormorant Garamond' and 'Satoshi' via Google Fonts / Fontshare.",
+    "Implement the 'Mix élégant' strategy: Home page hero and footer must be dark theme (#0A0A0A or #0B132B), while content sections (like events or about) should transition smoothly into light theme (#F8F9FA).",
+    "Use standard Shadcn components for forms, inputs, and complex logic, but style them manually to fit the premium aesthetic.",
+    "Do NOT use generic placeholder text. Use realistic French/English bilingual content concepts.",
+    "Do NOT use placeholder images. Rely solely on the provided URLs in this JSON file.",
+    "Add 'data-testid' to all buttons, links, and forms for automated testing.",
+    "Ensure generous padding/margins (py-24, gap-12) to achieve the 'airy' and 'institutional' feel.",
+    "Set up a global state or simple React Context for the FR/EN language switcher if needed, or build the UI for one primary language (EN) with the UI toggle present.",
+    "Incorporate framer-motion for smooth entrance animations on text and cards as users scroll down."
+  ]
+}
