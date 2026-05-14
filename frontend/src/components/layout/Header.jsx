@@ -57,8 +57,8 @@ export const Header = () => {
           className="flex items-center gap-3 group"
           data-testid="logo-link"
         >
-          <div className="w-9 h-9 rounded-md bg-dmi-gold flex items-center justify-center font-serif text-dmi-charcoal text-lg leading-none">
-            D
+          <div className="w-9 h-9 rounded-md flex items-center justify-center font-serif text-dmi-charcoal text-lg leading-none">
+            <img src="/img/logo.png" alt="Dalo Ministries Logo" className="w-5 h-5" />
           </div>
           <div className="leading-tight">
             <div className="font-serif text-white text-lg tracking-tight">

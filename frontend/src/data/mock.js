@@ -2,7 +2,7 @@
 
 export const IMAGES = {
   heroPastor:
-    "https://static.prod-images.emergentagent.com/jobs/a2add377-a02d-450c-9340-5bdcff1b280d/images/3ad5c207f1622910c4d36e61ee4837d62ebe26801987ffb25a5d000965b609c6.png",
+    "/img/pred1.png",
   prayerHands:
     "https://static.prod-images.emergentagent.com/jobs/a2add377-a02d-450c-9340-5bdcff1b280d/images/43dd518b315dd8c0985bff00348ab981611b8c6705b6a06f8137af1eebce80ec.png",
   worldMap:
@@ -25,9 +25,9 @@ export const IMAGES = {
 
 export const STATS = [
   { value: 27, suffix: "+", key: "years" },
-  { value: 42, suffix: "", key: "countries" },
-  { value: 180, suffix: "+", key: "conferences" },
-  { value: 120, suffix: "K", key: "community" },
+  { value: 30, suffix: "", key: "countries" },
+  { value: 20, suffix: "+", key: "conferences" },
+  { value: 10, suffix: "K", key: "community" },
 ];
 
 export const COUNTRIES = [
@@ -52,8 +52,8 @@ export const MINISTRIES = [
     id: "teaching",
     title: { fr: "École de la Parole", en: "School of the Word" },
     desc: {
-      fr: "Formation biblique approfondie pour bâtir des disciples solides et équilibrés.",
-      en: "In-depth biblical training to build solid, balanced disciples.",
+      fr: "Une formation biblique approfondie pour façonner des disciples solides, enracinés et équilibrés.",
+      en: "Comprehensive biblical training to develop mature and well‑balanced disciples.",
     },
     icon: "BookOpen",
   },
@@ -61,8 +61,8 @@ export const MINISTRIES = [
     id: "leaders",
     title: { fr: "Académie des Leaders", en: "Leaders Academy" },
     desc: {
-      fr: "Mentorat de pasteurs, entrepreneurs et porteurs de vision.",
-      en: "Mentorship for pastors, entrepreneurs, and vision carriers.",
+      fr: "Un programme de mentorat pour les pasteurs, entrepreneurs et porteurs de vision.",
+      en: "A mentorship program for pastors, entrepreneurs, and vision carriers.",
     },
     icon: "Crown",
   },
@@ -70,8 +70,8 @@ export const MINISTRIES = [
     id: "prayer",
     title: { fr: "Intercession Globale", en: "Global Intercession" },
     desc: {
-      fr: "Une chaîne de prière qui couvre les nations 24/7.",
-      en: "A 24/7 prayer chain covering the nations.",
+      fr: "Une chaîne de prière ininterrompue, couvrant les nations jour et nuit..",
+      en: "An uninterrupted prayer chain covering the nations day and night.",
     },
     icon: "Flame",
   },
@@ -88,8 +88,8 @@ export const MINISTRIES = [
     id: "youth",
     title: { fr: "Génération Élu", en: "Chosen Generation" },
     desc: {
-      fr: "Le ministère jeunesse pour la nouvelle génération de leaders.",
-      en: "The youth ministry raising the next generation of leaders.",
+      fr: "Un ministère jeunesse dédié à l’émergence d’une nouvelle génération de leaders.",
+      en: "A youth ministry dedicated to raising the next generation of leaders.",
     },
     icon: "Sparkles",
   },
@@ -97,8 +97,8 @@ export const MINISTRIES = [
     id: "media",
     title: { fr: "Plateforme Médias", en: "Media Platform" },
     desc: {
-      fr: "Diffusion mondiale des messages via TV, podcast et streaming.",
-      en: "Worldwide message broadcasting via TV, podcast, and streaming.",
+      fr: "Diffusion mondiale des messages via la TV, les podcasts et le streaming.",
+      en: "Worldwide message broadcasting via TV, podcasts, and streaming.",
     },
     icon: "Radio",
   },
@@ -106,7 +106,7 @@ export const MINISTRIES = [
     id: "social",
     title: { fr: "Action Sociale", en: "Social Action" },
     desc: {
-      fr: "Soins, éducation et aide humanitaire dans les communautés.",
+      fr: "Des actions de soins, d’éducation et d’aide humanitaire pour soutenir les communautés.",
       en: "Care, education, and humanitarian aid in communities.",
     },
     icon: "Heart",
@@ -189,11 +189,13 @@ export const VIDEOS = [
       fr: "La grâce qui élève — Partie I",
       en: "The Grace That Lifts — Part I",
     },
-    duration: "42:18",
+    duration: "00:45",
     date: "2026-01-12",
     thumb: IMAGES.worship1,
     category: "sermon",
-    youtubeId: "dQw4w9WgXcQ",
+    //videoId: "dQw4w9WgXcQ",
+   // videoyrl:"https://drive.google.com/file/d/1GCIjsxsvs2YPTOaGdIdai0gxW_N-X8_n/view?usp=drive_link",
+   videoId:"1GCIjsxsvs2YPTOaGdIdai0gxW_N-X8_n",
   },
   {
     id: "v2",
@@ -205,7 +207,7 @@ export const VIDEOS = [
     date: "2025-12-20",
     thumb: IMAGES.modernChurch,
     category: "teaching",
-    youtubeId: "dQw4w9WgXcQ",
+    videoId: "dQw4w9WgXcQ",
   },
   {
     id: "v3",
@@ -217,7 +219,7 @@ export const VIDEOS = [
     date: "2025-11-18",
     thumb: IMAGES.conf1,
     category: "sermon",
-    youtubeId: "dQw4w9WgXcQ",
+    videoId: "dQw4w9WgXcQ",
   },
   {
     id: "v4",
@@ -229,7 +231,7 @@ export const VIDEOS = [
     date: "2025-10-05",
     thumb: IMAGES.heroPastor,
     category: "interview",
-    youtubeId: "dQw4w9WgXcQ",
+    videoId: "dQw4w9WgXcQ",
   },
   {
     id: "v5",
@@ -241,7 +243,7 @@ export const VIDEOS = [
     date: "2025-09-15",
     thumb: IMAGES.abstractNavyGold,
     category: "podcast",
-    youtubeId: "dQw4w9WgXcQ",
+    videoId: "dQw4w9WgXcQ",
   },
   {
     id: "v6",
@@ -253,7 +255,7 @@ export const VIDEOS = [
     date: "2025-08-22",
     thumb: IMAGES.prayerHands,
     category: "teaching",
-    youtubeId: "dQw4w9WgXcQ",
+    videoId: "dQw4w9WgXcQ",
   },
 ];
 
@@ -316,7 +318,7 @@ export const CHURCHES = [
       { day: { fr: "Dimanche", en: "Sunday" }, time: "10:00 / 17:00" },
       { day: { fr: "Mercredi", en: "Wednesday" }, time: "19:30" },
     ],
-    socials: { facebook: "#", instagram: "#", youtube: "#" },
+    socials: { facebook: "https://www.facebook.com/91dmi", instagram: "https://www.instagram.com/dalo_ministries_international", youtube: "https://www.youtube.com/watch?v=b7PgKcCltoM" },
   },
   {
     id: "ch-london",

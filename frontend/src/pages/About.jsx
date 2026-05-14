@@ -136,7 +136,7 @@ export default function About() {
             "{t("about.legacyQuote")}"
           </p>
           <div className="mt-6 text-[10px] uppercase tracking-[0.32em] text-dmi-gold">
-            — Pastor Roland Dalo
+            — Pasteur Roland Dalo
           </div>
         </div>
       </section>

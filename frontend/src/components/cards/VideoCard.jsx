@@ -6,7 +6,8 @@ export const VideoCard = ({ video, large = false }) => {
   const { lang, t } = useLang();
   return (
     <a
-      href={`https://www.youtube.com/watch?v=${video.youtubeId}`}
+      //href={`https://www.youtube.com/watch?v=${video.youtubeId}`}
+      href={`https://drive.google.com/file/d/${video.videoId}/view`}
       target="_blank"
       rel="noopener noreferrer"
       className="group block"

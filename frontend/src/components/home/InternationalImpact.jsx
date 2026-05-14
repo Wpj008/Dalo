@@ -76,10 +76,10 @@ export const InternationalImpact = () => {
         {/* Mini cards under map */}
         <div className="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            { v: "42", l: t("stats.countries") },
-            { v: "6", l: "Continents" },
-            { v: "180+", l: t("stats.conferences") },
-            { v: "120K", l: t("stats.community") },
+            { v: "30", l: t("stats.countries") },
+            { v: "4", l: "Continents" },
+            { v: "20+", l: t("stats.conferences") },
+            { v: "10K", l: t("stats.community") },
           ].map((s, i) => (
             <Reveal key={i} delay={0.1 * i}>
               <div className="border border-white/10 rounded-md p-6 bg-white/[0.02] backdrop-blur-sm">

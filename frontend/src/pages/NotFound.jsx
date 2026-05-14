@@ -11,7 +11,7 @@ export default function NotFound() {
         404
       </div>
       <p className="dmi-lead text-white/70 mt-2">
-        The page you're looking for does not exist.
+       Le site est en Construction. Revenez plus tard !
       </p>
       <Link to="/" className="btn-gold mt-10" data-testid="404-home-link">
         Back to home

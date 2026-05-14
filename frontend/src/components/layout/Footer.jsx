@@ -38,8 +38,8 @@ export const Footer = () => {
         {/* Brand block */}
         <div className="md:col-span-5">
           <Link to="/" className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-md bg-dmi-gold flex items-center justify-center font-serif text-dmi-charcoal text-xl leading-none">
-              D
+            <div className="w-10 h-10 rounded-md flex items-center justify-center font-serif text-dmi-charcoal text-xl leading-none">
+              <img src="/img/logo.png" alt="Dalo Ministries Logo" className="w-6 h-6" />
             </div>
             <div className="leading-tight">
               <div className="font-serif text-xl">Dalo Ministries</div>
@@ -158,12 +158,12 @@ export const Footer = () => {
           <ul className="space-y-3 text-sm text-white/75">
             <li className="flex items-start gap-2">
               <MapPin size={14} className="mt-1 text-dmi-gold/80" />
-              <span>12 Avenue de la Lumière, 75011 Paris</span>
+              <span>56 RUE HENRI MATISSE CORBEIL ESSONNNES, 91100</span>
             </li>
             <li className="flex items-center gap-2">
               <Mail size={14} className="text-dmi-gold/80" />
               <a href="mailto:contact@rolanddalo.com" className="hover:text-white">
-                contact@rolanddalo.com
+                contactdmi@rolanddalo.com
               </a>
             </li>
             <li className="flex items-center gap-2">
@@ -172,13 +172,13 @@ export const Footer = () => {
             </li>
           </ul>
           <div className="flex items-center gap-4 mt-5 text-white/70">
-            <a href="#" aria-label="Facebook" className="hover:text-dmi-gold transition-colors" data-testid="social-facebook">
+            <a href="https://www.facebook.com/91dmi" aria-label="Facebook" className="hover:text-dmi-gold transition-colors" data-testid="social-facebook">
               <Facebook size={18} />
             </a>
-            <a href="#" aria-label="Instagram" className="hover:text-dmi-gold transition-colors" data-testid="social-instagram">
+            <a href="https://www.instagram.com/dalo_ministries_international" aria-label="Instagram" className="hover:text-dmi-gold transition-colors" data-testid="social-instagram">
               <Instagram size={18} />
             </a>
-            <a href="#" aria-label="Youtube" className="hover:text-dmi-gold transition-colors" data-testid="social-youtube">
+            <a href="https://www.youtube.com/watch?v=b7PgKcCltoM" aria-label="Youtube" className="hover:text-dmi-gold transition-colors" data-testid="social-youtube">
               <Youtube size={18} />
             </a>
             <a href="#" aria-label="Twitter" className="hover:text-dmi-gold transition-colors" data-testid="social-twitter">
@@ -190,7 +190,7 @@ export const Footer = () => {
 
       <div className="dmi-container mt-16 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-white/50">
         <div>
-          © {new Date().getFullYear()} Dalo Ministries International. {t("footer.rights")}
+          © {new Date().getFullYear()}. <a href="https://www.kynoviatech.com" className="hover:text-white/80" target="_blank" rel="noopener noreferrer">KynoviaTech</a> .{t("footer.rights")}
         </div>
         <div className="flex items-center gap-6">
           <Link to="/contact" className="hover:text-white/80">{t("footer.legal")}</Link>
