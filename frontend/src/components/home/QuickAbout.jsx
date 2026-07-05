@@ -14,9 +14,9 @@ export const QuickAbout = () => {
       <div className="dmi-container grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
         {/* Image side */}
         <Reveal className="lg:col-span-5 relative" y={40}>
-          <div className="relative aspect-[4/5] overflow-hidden rounded-md">
+          <div className="relative h-[750px] overflow-hidden rounded-md">
             <img
-              src={IMAGES.heroPastor}
+              src="/images/_MG_8410.png"
               alt="Pastor Roland Dalo"
               className="w-full h-full object-cover"
             />

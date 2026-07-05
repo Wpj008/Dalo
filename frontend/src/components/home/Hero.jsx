@@ -18,7 +18,7 @@ export const Hero = () => {
       {/* Background image with Ken Burns */}
       <div className="absolute inset-0">
         <img
-          src={IMAGES.heroPastor}
+          src="/images/9S6A4757.jpg"
           alt="Pastor Roland Dalo"
           className="w-full h-full object-cover object-center animate-ken-burns"
         />
