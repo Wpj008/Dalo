@@ -25,43 +25,57 @@ class AdminPanelProvider extends PanelProvider
     {
         return $panel
             ->default()
+
+            // Identification
             ->id('admin')
             ->path('admin')
             ->login()
 
-            // Logo et nom
+            // Branding
+            ->brandName('DALO Ministries')
             ->brandLogo(asset('images/DMI-LOGO.jpg'))
             ->brandLogoHeight('6rem')
-            ->brandName('Dalo Ministries')
 
+            // Couleurs
             ->colors([
                 'primary' => Color::Amber,
             ])
 
+            // Groupes du menu
+            ->navigationGroups([
+                'Administration',
+                'Agenda',
+                'Évènements',
+                'Contenus',
+            ])
+
+            // Ressources
             ->discoverResources(
                 in: app_path('Filament/Resources'),
-                for: 'App\\Filament\\Resources'
+                for: 'App\\Filament\\Resources',
             )
 
+            // Pages
             ->discoverPages(
                 in: app_path('Filament/Pages'),
-                for: 'App\\Filament\\Pages'
+                for: 'App\\Filament\\Pages',
             )
 
             ->pages([
                 Dashboard::class,
             ])
 
+            // Widgets
             ->discoverWidgets(
                 in: app_path('Filament/Widgets'),
-                for: 'App\\Filament\\Widgets'
+                for: 'App\\Filament\\Widgets',
             )
 
             ->widgets([
-                AccountWidget::class,
-                FilamentInfoWidget::class,
+                AccountWidget::class
             ])
 
+            // Middlewares
             ->middleware([
                 EncryptCookies::class,
                 AddQueuedCookiesToResponse::class,
@@ -74,6 +88,7 @@ class AdminPanelProvider extends PanelProvider
                 DispatchServingFilamentEvent::class,
             ])
 
+            // Authentification
             ->authMiddleware([
                 Authenticate::class,
             ]);
