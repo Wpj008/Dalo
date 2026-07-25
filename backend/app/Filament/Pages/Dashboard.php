@@ -18,7 +18,7 @@ class Dashboard extends BaseDashboard
     {
         return [
             StatsOverviewWidget::class,
-            EventsChartWidget::class,
+            //EventsChartWidget::class,
             TodayAgendaWidget::class,
             LatestEventsWidget::class,
             LatestTeachingsWidget::class,
