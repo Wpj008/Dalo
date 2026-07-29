@@ -5,7 +5,7 @@ export const getBooks = async () => {
     return data;
 };
 
-export const getBook = async (id: number) => {
+export const getBook = async (id) => {
     const { data } = await api.get(`/books/${id}`);
     return data;
 };

@@ -5,7 +5,7 @@ export const getEvents = async () => {
     return data;
 };
 
-export const getEvent = async (id: number) => {
+export const getEvent = async (id) => {
     const { data } = await api.get(`/events/${id}`);
     return data;
 };

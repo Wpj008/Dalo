@@ -5,7 +5,7 @@ export const getTeachings = async () => {
     return data;
 };
 
-export const getTeaching = async (id: number) => {
+export const getTeaching = async (id) => {
     const { data } = await api.get(`/teachings/${id}`);
     return data;
 };

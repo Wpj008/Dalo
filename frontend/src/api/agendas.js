@@ -5,7 +5,7 @@ export const getAgendas = async () => {
     return data;
 };
 
-export const getAgenda = async (id: number) => {
+export const getAgenda = async (id) => {
     const { data } = await api.get(`/agendas/${id}`);
     return data;
 };
