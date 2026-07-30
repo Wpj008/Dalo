@@ -10,6 +10,7 @@ export const translations = {
       churches: "Églises",
       partnership: "Partenariat",
       prayer: "Demande de prière",
+      books: "Livres",
       member: "Devenir membre",
       contact: "Contact",
       donate: "Faire un don",
@@ -55,6 +56,14 @@ export const translations = {
       conferences: "Conférences organisées",
       community: "Communauté mondiale",
     },
+
+    books: {
+      eyebrow: "Librairie",
+      title: "Les livres de l'Apôtre Roland Dalo",
+      subtitle:
+        "Découvrez les ouvrages de l'Apôtre Roland Dalo, des ressources destinées à approfondir votre connaissance de Dieu et à accompagner votre croissance spirituelle.",
+    },
+
     footer: {
       tagline: "Un ministère. Une vision. Des nations.",
       explore: "Explorer",
@@ -252,6 +261,12 @@ export const translations = {
       filterCamp: "Campaigns",
       filterRetreat: "Retreats",
     },
+    books: {
+        eyebrow: "Bookstore",
+        title: "Books by Apostle Roland Dalo",
+        subtitle:
+          "Discover Apostle Roland Dalo's books, resources designed to deepen your knowledge of God and support your spiritual growth.",
+      },
     media: {
       eyebrow: "Library",
       title: "Messages, podcasts, archives.",

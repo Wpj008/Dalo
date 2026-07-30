@@ -127,6 +127,16 @@ export const Footer = () => {
             {t("footer.resources")}
           </div>
           <ul className="space-y-3 text-sm text-white/75">
+
+            <li>
+                <Link
+                  to="/books"
+                  className="hover:text-white transition-colors"
+                  data-testid="footer-books-link"
+                >
+                  {t("nav.books")}
+                </Link>
+              </li>
             <li>
               <Link to="/prayer" className="hover:text-white transition-colors" data-testid="footer-prayer-link">
                 {t("nav.prayer")}

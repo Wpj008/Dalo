@@ -18,6 +18,8 @@ import PrayerRequest from "./pages/PrayerRequest";
 import BecomeMember from "./pages/BecomeMember";
 import EventDetail from "./pages/EventDetail";
 import NotFound from "./pages/NotFound";
+import Books from "./pages/Books";
+import BookDetail from "./pages/BookDetail";
 
 function App() {
   return (
@@ -41,6 +43,9 @@ function App() {
             <Route path="/churches" element={<Churches />} />
             <Route path="/prayer" element={<PrayerRequest />} />
             <Route path="/member" element={<BecomeMember />} />
+
+            <Route path="/books" element={<Books />} />
+            <Route path="/books/:id" element={<BookDetail />} /> 
 
             <Route path="*" element={<NotFound />} />
           </Route>
