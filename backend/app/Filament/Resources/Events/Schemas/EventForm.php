@@ -61,8 +61,10 @@ class EventForm
 
                 FileUpload::make('image')
                     ->label("Image d'affiche")
-                    ->directory('events')
                     ->image()
+                    ->disk('public')
+                    ->directory('events')
+                    ->visibility('public')
                     ->imageEditor(),
 
                 Select::make('statut')

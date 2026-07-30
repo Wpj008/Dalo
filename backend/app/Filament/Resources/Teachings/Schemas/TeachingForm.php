@@ -52,9 +52,11 @@ class TeachingForm
                     ]),
 
                 FileUpload::make('image')
-                    ->label('Image')
-                    ->directory('teachings/images')
+                    ->label("Image d'affiche")
                     ->image()
+                    ->disk('public')
+                    ->directory('events')
+                    ->visibility('public')
                     ->imageEditor(),
 
             ])
