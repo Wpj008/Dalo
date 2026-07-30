@@ -22,12 +22,23 @@ class EventMediaForm
                     ->preload()
                     ->required(),
 
+                // Select::make('type')
+                //     ->label('Type de média')
+                //     ->options([
+                //         'PHOTO' => 'Photo',
+                //         'VIDEO' => 'Vidéo',
+                //     ])
+                //     ->required(),
+
                 Select::make('type')
                     ->label('Type de média')
                     ->options([
                         'PHOTO' => 'Photo',
                         'VIDEO' => 'Vidéo',
                     ])
+                    ->default('PHOTO')
+                    ->disabled()
+                    ->dehydrated()
                     ->required(),
 
                 TextInput::make('nom')
@@ -37,8 +48,10 @@ class EventMediaForm
 
                 FileUpload::make('fichier')
                     ->label('Fichier')
+                    ->disk('public')
                     ->directory('event-media')
-                    ->required(),
+                    ->visibility('public')
+                    ->image(),
 
                 Textarea::make('description')
                     ->label('Description')
