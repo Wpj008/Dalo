@@ -140,6 +140,97 @@ export default function EventDetail() {
                     "La description de cet événement sera disponible prochainement."}
                 </p>
 
+            {/* GALERIE PHOTOS */}
+
+            {event.medias &&
+            event.medias.filter((media) => media.type === "PHOTO").length > 0 && (
+                <div className="mt-20">
+
+                <h2 className="font-serif text-4xl text-dmi-charcoal mb-10">
+                    Galerie photos
+                </h2>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    {event.medias
+                    .filter((media) => media.type === "PHOTO")
+                    .map((media) => (
+                        <div
+                        key={media.id}
+                        className="group overflow-hidden rounded-xl shadow hover:shadow-xl transition-all"
+                        >
+                        <img
+                            src={`${process.env.REACT_APP_STORAGE_URL}/${media.fichier}`}
+                            alt={media.nom}
+                            className="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+
+                        <div className="p-4 bg-white">
+
+                            <h3 className="font-medium text-dmi-charcoal">
+                            {media.nom}
+                            </h3>
+
+                            {media.description && (
+                            <p className="text-sm text-dmi-charcoal/60 mt-2">
+                                {media.description}
+                            </p>
+                            )}
+
+                        </div>
+                        </div>
+                    ))}
+
+                </div>
+
+                </div>
+            )}
+            
+
+            {/* VIDEOS */}
+
+            {event.medias &&
+            event.medias.filter((media) => media.type === "VIDEO").length > 0 && (
+                <div className="mt-20">
+
+                <h2 className="font-serif text-4xl text-dmi-charcoal mb-10">
+                    Vidéos
+                </h2>
+
+                <div className="space-y-6">
+
+                    {event.medias
+                    .filter((media) => media.type === "VIDEO")
+                    .map((media) => (
+                        <a
+                        key={media.id}
+                        href={media.fichier}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-between border rounded-xl p-6 hover:border-dmi-gold transition"
+                        >
+                        <div>
+                            <h3 className="font-semibold text-lg">
+                            {media.nom}
+                            </h3>
+
+                            {media.description && (
+                            <p className="text-sm text-gray-500 mt-1">
+                                {media.description}
+                            </p>
+                            )}
+                        </div>
+
+                        <span className="text-dmi-gold font-medium">
+                            Regarder →
+                        </span>
+                        </a>
+                    ))}
+
+                </div>
+
+                </div>
+            )}
               </div>
 
             </div>
