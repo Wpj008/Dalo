@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Play, Clock } from "lucide-react";
 import { useLang } from "../../i18n/LanguageContext";
 
@@ -10,10 +11,8 @@ export const VideoCard = ({ video, large = false }) => {
     : "/images/placeholder-video.jpg";
 
   return (
-    <a
-      href={video.video_url}
-      target="_blank"
-      rel="noopener noreferrer"
+    <Link
+      to={`/teachings/${video.id}`}
       className="group block"
       data-testid={`video-card-${video.id}`}
     >
@@ -65,6 +64,6 @@ export const VideoCard = ({ video, large = false }) => {
           {video.titre}
         </h3>
       </div>
-    </a>
+    </Link>
   );
 };
