@@ -8,15 +8,28 @@ use Illuminate\Http\Request;
 class AgendaController extends Controller
 {
     /**
-     * Afficher la liste des rendez-vous.
+     * Afficher les prochains rendez-vous publics de l'Apôtre.
      */
     public function index()
     {
         $agendas = Agenda::with([
-            'agendaType',
-            'creator',
-            'event',
-        ])->get();
+                'agendaType',
+                'creator',
+            ])
+
+            // Uniquement les rendez-vous visibles sur le site.
+            ->where('is_public', true)
+
+            // Uniquement les rendez-vous qui n'ont pas encore eu lieu.
+            ->where('date_debut', '>=', now())
+
+            // Uniquement les rendez-vous prévus.
+            ->where('statut', 'PREVU')
+
+            // Les plus proches en premier.
+            ->orderBy('date_debut')
+
+            ->get();
 
         return response()->json($agendas);
     }
@@ -30,7 +43,6 @@ class AgendaController extends Controller
             $agenda->load([
                 'agendaType',
                 'creator',
-                'event',
             ])
         );
     }
