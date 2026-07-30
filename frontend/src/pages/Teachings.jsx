@@ -78,7 +78,7 @@ export default function Teachings() {
             </Reveal>
           )}
 
-          <div className="flex flex-wrap items-center gap-3 mb-12">
+          {/* <div className="flex flex-wrap items-center gap-3 mb-12">
             {filters.map((f) => (
               <button
                 key={f.id}
@@ -93,7 +93,7 @@ export default function Teachings() {
                 {f.label}
               </button>
             ))}
-          </div>
+          </div> */}
 
           {!loading && (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
