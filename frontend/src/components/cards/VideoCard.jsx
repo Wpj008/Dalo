@@ -6,7 +6,9 @@ import { useLang } from "../../i18n/LanguageContext";
 export const VideoCard = ({ video, large = false }) => {
   const { lang } = useLang();
 
-  const imageUrl = video.image
+  const imageUrl = video.thumbnail
+    ? video.thumbnail
+    : video.image
     ? `${process.env.REACT_APP_STORAGE_URL}/${video.image}`
     : "/images/placeholder-video.jpg";
 

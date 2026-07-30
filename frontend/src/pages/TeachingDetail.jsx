@@ -161,7 +161,7 @@ export default function TeachingDetail() {
 
                   {teaching.document_url && (
                     <a
-                      href={teaching.document_url}
+                      href={`${process.env.REACT_APP_STORAGE_URL}/${teaching.document_url}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-center gap-3 w-full border border-dmi-charcoal py-3 rounded-md hover:bg-dmi-charcoal hover:text-white transition"

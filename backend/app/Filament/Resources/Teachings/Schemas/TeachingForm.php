@@ -47,11 +47,13 @@ class TeachingForm
 
                 FileUpload::make('document_url')
                     ->label('Document (PDF)')
+                    ->disk('public')
                     ->directory('teachings/documents')
+                    ->visibility('public')
                     ->acceptedFileTypes([
                         'application/pdf',
                     ]),
-
+                    
                 FileUpload::make('image')
                     ->label("Image d'affiche")
                     ->image()
