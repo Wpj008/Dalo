@@ -44,4 +44,12 @@ class Event extends Model
     {
         return $this->hasMany(EventMedia::class);
     }
+
+    /**
+     * Rendez-vous d'agenda associés à cet événement.
+     */
+    public function agendas(): HasMany
+    {
+        return $this->hasMany(Agenda::class);
+    }
 }

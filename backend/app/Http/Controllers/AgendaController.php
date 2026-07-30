@@ -12,12 +12,14 @@ class AgendaController extends Controller
      */
     public function index()
     {
-        $agendas = Agenda::with(['agendaType', 'creator'])->get();
+        $agendas = Agenda::with([
+            'agendaType',
+            'creator',
+            'event',
+        ])->get();
 
         return response()->json($agendas);
     }
-
-
 
     /**
      * Afficher un rendez-vous.
@@ -25,9 +27,11 @@ class AgendaController extends Controller
     public function show(Agenda $agenda)
     {
         return response()->json(
-            $agenda->load(['agendaType', 'creator'])
+            $agenda->load([
+                'agendaType',
+                'creator',
+                'event',
+            ])
         );
     }
-
-
 }

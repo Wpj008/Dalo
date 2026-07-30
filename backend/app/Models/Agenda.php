@@ -17,6 +17,7 @@ class Agenda extends Model
         'date_fin',
         'lieu',
         'agenda_type_id',
+        'event_id',
         'statut',
         'is_public',
         'created_by'
@@ -43,4 +44,12 @@ class Agenda extends Model
     {
         return $this->belongsTo(User::class, 'created_by');
     }
+
+            /**
+         * Événement associé au rendez-vous.
+         */
+        public function event(): BelongsTo
+        {
+            return $this->belongsTo(Event::class);
+        }
 }

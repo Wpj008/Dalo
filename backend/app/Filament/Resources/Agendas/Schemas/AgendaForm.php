@@ -34,6 +34,14 @@ class AgendaForm
                     ->preload()
                     ->required(),
 
+                    Select::make('event_id')
+                        ->label("Événement associé")
+                        ->relationship('event', 'titre')
+                        ->searchable()
+                        ->preload()
+                        ->placeholder("Aucun événement")
+                        ->nullable(),
+
                 DateTimePicker::make('date_debut')
                     ->label('Date de début')
                     ->seconds(false)
