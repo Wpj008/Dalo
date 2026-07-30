@@ -33,10 +33,11 @@ class TeachingForm
                     ->placeholder('Ex : Pasteur Roland Dalo')
                     ->maxLength(255),
 
-                TextInput::make('categorie')
-                    ->label('Catégorie')
-                    ->placeholder('Ex : Foi, Prière, Famille...')
-                    ->maxLength(100),
+                    //créer une table plus tard dédiée
+                // TextInput::make('categorie')
+                //     ->label('Catégorie')
+                //     ->placeholder('Ex : Foi, Prière, Famille...')
+                //     ->maxLength(100),
 
                 TextInput::make('video_url')
                     ->label('Lien vidéo'),
