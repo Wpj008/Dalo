@@ -33,7 +33,9 @@ class BookForm
                 FileUpload::make('image')
                     ->label('Couverture')
                     ->directory('books')
+                    ->disk('public')
                     ->image()
+                    ->visibility('public')
                     ->imageEditor(),
 
                 TextInput::make('prix')
