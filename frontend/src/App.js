@@ -3,11 +3,13 @@ import "@/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "./i18n/LanguageContext";
 import { Layout } from "./components/layout/Layout";
+
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Ministries from "./pages/Ministries";
 import Events from "./pages/Events";
-import Media from "./pages/Media";
+import Teachings from "./pages/Teachings";
+import TeachingDetail from "./pages/TeachingDetail";
 import InternationalImpactPage from "./pages/InternationalImpactPage";
 import Partnership from "./pages/Partnership";
 import Contact from "./pages/Contact";
@@ -26,13 +28,17 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/ministries" element={<Ministries />} />
             <Route path="/events" element={<Events />} />
-            <Route path="/media" element={<Media />} />
+
+            <Route path="/teachings" element={<Teachings />} />
+            <Route path="/teachings/:id" element={<TeachingDetail />} />
+
             <Route path="/impact" element={<InternationalImpactPage />} />
             <Route path="/partnership" element={<Partnership />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/churches" element={<Churches />} />
             <Route path="/prayer" element={<PrayerRequest />} />
             <Route path="/member" element={<BecomeMember />} />
+
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

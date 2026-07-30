@@ -104,7 +104,7 @@ export const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link to="/media" className="hover:text-white transition-colors" data-testid="footer-media-link">
+              <Link to="/teachings"className="hover:text-white transition-colors" data-testid="footer-media-link">
                 {t("nav.media")}
               </Link>
             </li>
