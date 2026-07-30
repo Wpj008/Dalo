@@ -16,6 +16,7 @@ import Contact from "./pages/Contact";
 import Churches from "./pages/Churches";
 import PrayerRequest from "./pages/PrayerRequest";
 import BecomeMember from "./pages/BecomeMember";
+import EventDetail from "./pages/EventDetail";
 import NotFound from "./pages/NotFound";
 
 function App() {
@@ -27,7 +28,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/ministries" element={<Ministries />} />
+
             <Route path="/events" element={<Events />} />
+            <Route path="/events/:id" element={<EventDetail />} />
 
             <Route path="/teachings" element={<Teachings />} />
             <Route path="/teachings/:id" element={<TeachingDetail />} />
