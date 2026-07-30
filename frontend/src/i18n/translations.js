@@ -5,7 +5,7 @@ export const translations = {
       about: "À propos",
       ministries: "Ministères",
       events: "Événements",
-      media: "Médias",
+      media: "Enseignements",
       impact: "Impact International",
       churches: "Églises",
       partnership: "Partenariat",
