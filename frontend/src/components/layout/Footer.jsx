@@ -37,17 +37,17 @@ export const Footer = () => {
       <div className="dmi-container grid grid-cols-1 md:grid-cols-12 gap-12">
         {/* Brand block */}
         <div className="md:col-span-5">
-          <Link to="/" className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-md bg-dmi-gold flex items-center justify-center font-serif text-dmi-charcoal text-xl leading-none">
-              D
-            </div>
-            <div className="leading-tight">
-              <div className="font-serif text-xl">Dalo Ministries</div>
-              <div className="text-[10px] uppercase tracking-[0.32em] text-dmi-gold/80">
-                International
-              </div>
-            </div>
-          </Link>
+        <Link
+          to="/"
+          className="inline-block mb-6"
+          data-testid="footer-logo-link"
+        >
+          <img
+            src="/images/dmi_logo_update-removebg-preview.png"
+            alt="Dalo Ministries International"
+            className="h-28 w-auto object-contain"
+          />
+        </Link>
           <p className="font-serif italic text-2xl text-white/80 max-w-md leading-snug">
             {t("footer.tagline")}
           </p>

@@ -54,20 +54,14 @@ export const Header = () => {
         {/* Logo */}
         <Link
           to="/"
-          className="flex items-center gap-3 group"
+          className="flex items-center"
           data-testid="logo-link"
         >
-          <div className="w-9 h-9 rounded-md bg-dmi-gold flex items-center justify-center font-serif text-dmi-charcoal text-lg leading-none">
-            D
-          </div>
-          <div className="leading-tight">
-            <div className="font-serif text-white text-lg tracking-tight">
-              Dalo Ministries
-            </div>
-            <div className="text-[10px] uppercase tracking-[0.32em] text-dmi-gold/80">
-              International
-            </div>
-          </div>
+          <img
+            src="/images/dmi_logo_update-removebg-preview.png"
+            alt="Dalo Ministries International"
+            className="h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+          />
         </Link>
 
         {/* Desktop nav */}
