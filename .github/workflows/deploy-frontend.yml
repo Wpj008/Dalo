@@ -1,0 +1,76 @@
+name: Deploy Frontend
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "frontend/**"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: frontend
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build React
+        run: npm run build
+
+      - name: Verify build
+        run: |
+          echo "Current directory:"
+          pwd
+          echo ""
+          echo "Build folder:"
+          ls -la build
+
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+
+
+      - name: Test SSH connection
+        run: |
+          ssh -o StrictHostKeyChecking=no \
+            ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
+            "echo 'SSH OK'"
+
+
+      - name: Prepare remote directory
+        run: |
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "
+            rm -rf /home/rolanddasi/www_tmp &&
+            mkdir -p /home/rolanddasi/www_tmp
+          "
+
+      - name: Upload build
+        run: |
+          scp -r build/* \
+            ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/rolanddasi/www_tmp/
+
+      - name: Publish
+        run: |
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "
+            rm -rf ${{ secrets.FRONTEND_PATH }}/* &&
+            cp -a /home/rolanddasi/www_tmp/. ${{ secrets.FRONTEND_PATH }}/ &&
+            rm -rf /home/rolanddasi/www_tmp
+          "
