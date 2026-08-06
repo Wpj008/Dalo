@@ -27,6 +27,7 @@ return new class extends Migration
 
             $table->string('nom');
 
+            //url
             $table->string('fichier');
 
             $table->text('description')->nullable();
