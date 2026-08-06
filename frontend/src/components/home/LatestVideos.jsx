@@ -50,7 +50,7 @@ export const LatestVideos = () => {
 
           <Reveal delay={0.2}>
             <Link
-              to="/media"
+              to="/teachings"
               className="inline-flex items-center gap-2 text-sm tracking-wide text-dmi-charcoal hover:text-dmi-gold transition-colors group"
               data-testid="home-videos-cta"
             >

@@ -23,7 +23,7 @@ export default function About() {
           <Reveal className="lg:col-span-5">
             <div className="relative aspect-[3/4] overflow-hidden rounded-md">
               <img
-                src={IMAGES.heroPastor}
+                src="/images/_MG_8410.png"
                 alt="Roland Dalo"
                 className="w-full h-full object-cover"
               />

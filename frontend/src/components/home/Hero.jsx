@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLang } from "../../i18n/LanguageContext";
-import { IMAGES } from "../../data/mock";
 
 export const Hero = () => {
   const { t } = useLang();
